@@ -70,6 +70,10 @@ nav#leftColumn li > ul > li > a,
   /* overflow: scroll !important; */
 }
 
+ul.tabnav li a.selected:after, table.calendar_small .current *, table.calendar .current, .calendar-agenda-day .current, .optionsRibbon ul li.selected a:before {
+  background: #ff56c7 !important;
+}
+
 .difSignIn,
 input[type="submit"],
 input[type="button"],
