@@ -74,6 +74,10 @@ ul.tabnav li a.selected:after, table.calendar_small .current *, table.calendar .
   background: #ff56c7 !important;
 }
 
+* {
+  pointer-events: auto !important;
+}
+
 .difSignIn,
 input[type="submit"],
 input[type="button"],
