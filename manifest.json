@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Bilboard Enhancer",
+  "description": "Makes your Bilboard or other Neo LMS a lot cooler, automatically!",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["https://bilboard.bene.edu.ph/*"],
+      "js": ["content.js"],
+      "css": ["style.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": ["activeTab"]
+}
