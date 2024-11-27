@@ -34,3 +34,26 @@ window.onload = () => {
 
 console.log("Bil Enhancer");
 window._bilEnch = true;
+
+const mainNav = "#wrapper > header > div.quickLinks";
+const mainID = "custom_nav_bau";
+
+function mainNavC() {
+  const nav = document.querySelector(mainNav);
+  if (!nav) {
+    return console.error("Main navigation not enhanced.");
+  }
+  if (!nav.querySelector(`#${mainID}`)) {
+    const custom = document.createElement("div");
+    custom.id = mainID;
+    nav.prepend(custom);
+  }
+}
+
+const observer = new MutationObserver(() => mainNavC());
+const target = document.body;
+if (target) {
+  observer.observe(target, { childList: true, subtree: true });
+} else {
+  console.error("Failed to start observer: body not found.");
+}
